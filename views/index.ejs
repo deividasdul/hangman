@@ -1,0 +1,50 @@
+<%- include("partials/header.ejs"); %>
+<% if (locals.username) { %>
+  <h1 class="welcome-message">Welcome, <%=username%></h1>
+  <%} else { %>
+  <h1 class="welcome-message">Welcome, Guest</h1>
+  <%} %>
+
+  <div class="box">
+    <h2>Hangman</h2>
+    <h3>Choose a difficulty:</h3>
+    <form method="GET" action="/easy">
+      <button class="difficulty-button" type="submit">Easy</button>
+    </form>
+    <form method="GET" action="/medium">
+      <button class="difficulty-button" type="submit">Medium</button>
+    </form>
+    <form method="GET" action="/hard">
+      <button class="difficulty-button" type="submit">Hard</button>
+    </form>
+
+    <div class="bottom-box">
+      <div>
+        <form method="POST" action="/mute">
+          <button type="submit">
+            <img src="./assets/images/icons8-mute-50.png" alt="mute sound button">
+          </button>
+        </form>
+      </div>
+      <div>
+        <form method="POST" action="/leaderboard">
+          <button type="submit">
+            <img src="./assets/images/icons8-leaderboard-50.png" alt="show leaderboards button">
+          </button>
+        </form>
+      </div>
+      <div>
+        <form method="POST" action="/register">
+          <button type="submit">
+            <img src="./assets/images/icons8-add-user-male-50.png" alt="register button">
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./menu.js"></script>
+
+  <%- include("./partials/footer.ejs"); %>
+</body>

@@ -1,0 +1,129 @@
+<%- include("partials/header.ejs"); %>
+<h2>Difficulty: Easy</h2>
+<h3>Attempts: <%=currentAttempts %> / 9</h3>
+<div class="play-box">
+  <%for (var i = 0; i < word.length; i++) { %>
+    <span class="word">_</span>
+ <%}%>
+</div>
+ <div class="letters-box">
+  <div class="first-row">
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="q">
+      <button type="submit" id="q" class="letter">Q</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="w">
+      <button id="w" class="letter">W</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="e">
+      <button id="e" class="letter">E</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="r">
+      <button id="r" class="letter">R</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="t">
+      <button id="t" class="letter">T</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="y">
+      <button id="y" class="letter">Y</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="u">
+      <button id="u" class="letter">U</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="i">
+      <button id="i" class="letter">I</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="o">
+      <button id="o" class="letter">O</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="p">
+      <button id="p" class="letter">P</button>
+    </form>
+  </div>
+  <div class="second-row">
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="a">
+      <button id="a" class="letter">A</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="s">
+      <button id="s" class="letter">S</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="d">
+      <button id="d" class="letter">D</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="f">
+      <button id="f" class="letter">F</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="g">
+      <button id="g" class="letter">G</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="h">
+      <button id="h" class="letter">H</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="j">
+      <button id="j" class="letter">J</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="k">
+      <button id="k" class="letter">K</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="l">
+      <button id="l" class="letter">L</button>
+    </form>
+  </div>
+  <div class="third-row">
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="z">
+      <button id="z" class="letter">Z</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="x">
+      <button id="x" class="letter">X</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="c">
+      <button id="c" class="letter">C</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="v">
+      <button id="v" class="letter">V</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="b">
+      <button id="b" class="letter">B</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="n">
+      <button id="n" class="letter">N</button>
+    </form>
+    <form action="/check" method="post">
+      <input type="hidden" name="letter" value="m">
+      <button id="m" class="letter">M</button>
+    </form>
+  </div>
+  <form method="GET" action="/">
+    <button class="difficulty-button">MAIN MENU</button>
+  </form>
+ </div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+ <script src="./menu.js"></script>
+<%- include("./partials/footer.ejs"); %>
+
+</body>
